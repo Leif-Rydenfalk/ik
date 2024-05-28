@@ -79,7 +79,7 @@ if (UNAME_PROGRAM)
     execute_process (
         COMMAND ${UNAME_PROGRAM} -o -r -m -p -i
         OUTPUT_VARIABLE IK_HOST_COMPUTER)
-    string (REPLACE "\n" "" IK_HOST_COMPUTER ${IK_HOST_COMPUTER})
+        string(REPLACE "\n" "" IK_HOST_COMPUTER "${IK_HOST_COMPUTER}")
 else ()
     set (IK_HOST_COMPUTER ${CMAKE_HOST_SYSTEM_NAME})
 endif ()
